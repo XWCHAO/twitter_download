@@ -1,4 +1,26 @@
-Semeval Twitter data download script
+====================
+Semeval Twitter data download script + user info
+====================
+
+Update: Includes script to run user information. The download_tweets_user_api.py file is to be used to download the tweets and user information for SEMEVAL 2016: Sentiment Analysis in Twitter. If you are not interested in using user information, you can still use download_tweets_api.py, or exclude the "--user" option of this file. This file is an initial template for basic user information. The use of user information can be changed to include or exclude more user data. Feel free to manipulate this file to download additional user information if so desired (e.g. you can check if any of the other users in the dataset are friends)
+
+Prerequisites:
+--------------
+Please read and follow the instructions below for download_tweets_api.py first using this script instead.
+
+Usage:
+--------------
+ python download_tweets_user_api.py --dist input.txt --output output.txt --user
+
+Output Format:
+--------------
+ *_semeval_tweets.txt: tweet id \t topic \t tweet text
+ 
+ *_semeval_userinfo.txt: tweet id \t user id \t follower count \t status count \t description \t friend
+   count \t location \t language \t name \t time zone
+
+====================
+Semeval Twitter data download script (Original)
 ====================
 
 For downloading tweets distributed using IDs to protect privacy.  Uses the format of the [Semeval Twitter sentiment analysis dataset](http://www.cs.york.ac.uk/semeval-2013/task2/index.php?id=data)
@@ -22,7 +44,6 @@ The first time you run this, it should open up a web browser, have you log into 
 ```
 python download_tweets_api.py --dist=tweeti-a.dist.tsv --output=downloaded.tsv
 ```
-
 -Note that it takes about 18 hours to download the Semeval sentiment analysis training dataset.
 
 Restarting after a partial download:
