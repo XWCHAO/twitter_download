@@ -1,3 +1,25 @@
+############################################################################################################
+# Created: 8/3/2016 Last Update: 11/3/2016
+# Contact: semevaltweet@googlegroups.com
+#
+# About: Update to download_tweets_api.py to also download the user information for a given Twitter ID. See 
+#   For more information about the task, see:http://alt.qcri.org/semeval2017/task4/
+#
+# Description: This file is to be used to download the tweets and user information for
+#   SEMEVAL 2016: Sentiment Analysis in Twitter. If you are not interested in using user information, you
+#   can still use download_tweets_api.py, or exclude the "--user" option of this file. This file is an
+#   initial template for basic user information. The use of user information can be changed to include or
+#   exclude more user data. Feel free to manipulate this file to download additional user information if so
+#   desired (e.g. you can check if any of the other users in the dataset are friends)
+#
+# Usage: python download_tweets_user_api.py --dist input.txt --output output.txt --user
+#
+# Output Format:
+# *_semeval_tweets.txt: tweet id \t topic \t tweet text
+# *_semeval_userinfo.txt: tweet id \t user id \t follower count \t status count \t description \t friend
+#   count \t location \t language \t name \t time zone
+#
+############################################################################################################
 import sys
 import os
 import time
